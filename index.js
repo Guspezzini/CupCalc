@@ -29,6 +29,6 @@ resposta.innerHTML += `Área base menor: ${calcAreaBaseMenor.toFixed(2)}cm²<br>
 resposta.innerHTML += `Área base maior: ${calcAreaBaseMaior.toFixed(2)}cm²<br>`
 resposta.innerHTML += `Área lateral: ${calcAreaLateral.toFixed(2)}cm²<br>`
 resposta.innerHTML += `Área total: ${calcAreaTtal.toFixed(2)}cm²<br>`
-resposta.innerHTML += `Volume: ${calcVolume.toFixed(2)}Ml<br>`
+resposta.innerHTML += `Volume: ${calcVolume.toFixed(2)}mL<br>`
 resposta.innerHTML += `Classificação: ${classificar}`
 }
