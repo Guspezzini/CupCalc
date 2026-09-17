@@ -24,11 +24,11 @@ document.getElementById('calcular').onclick = function () {
     let calcVolume = copo.calcularVolume()
     let classificar = copo.classificar()
 
-    resposta.innerHTML = `Geratriz: ${calcGeratriz}<br>`
-    resposta.innerHTML += `Área base menor: ${calcAreaBaseMenor}<br>`
-    resposta.innerHTML += `Área base maior: ${calcAreaBaseMaior}<br>`
-    resposta.innerHTML += `Área lateral: ${calcAreaLateral}<br>`
-    resposta.innerHTML += `Área total: ${calcAreaTtal}<br>`
-    resposta.innerHTML += `Volume: ${calcVolume}<br>`
-    resposta.innerHTML += `Classificação: ${classificar}`
+resposta.innerHTML = `Geratriz: ${calcGeratriz.toFixed(2)}cm<br>`
+resposta.innerHTML += `Área base menor: ${calcAreaBaseMenor.toFixed(2)}cm²<br>`
+resposta.innerHTML += `Área base maior: ${calcAreaBaseMaior.toFixed(2)}cm²<br>`
+resposta.innerHTML += `Área lateral: ${calcAreaLateral.toFixed(2)}cm²<br>`
+resposta.innerHTML += `Área total: ${calcAreaTtal.toFixed(2)}cm²<br>`
+resposta.innerHTML += `Volume: ${calcVolume.toFixed(2)}Ml<br>`
+resposta.innerHTML += `Classificação: ${classificar}`
 }
