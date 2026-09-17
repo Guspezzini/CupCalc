@@ -1,14 +1,16 @@
 class Copo {
 
     constructor(raioMaior, raioMenor, altura) {
-    
+
         this.raioMaior = raioMaior
         this.raioMenor = raioMenor
         this.altura = altura
     }
 
     calcularGeratriz() {
-        return Math.sqrt(this.raioMaior - this.raioMenor) ** 2 + this.altura ** 2
+        return Math.sqrt(
+            (this.raioMaior - this.raioMenor) ** 2 + this.altura ** 2
+        )
     }
 
     calcularAreaBaseMenor() {
