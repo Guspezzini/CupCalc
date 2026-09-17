@@ -1,4 +1,5 @@
-//const Copo = require("./Copo")
+
+const Copo = require("./Copo")
 document.getElementById('calcular').onclick = function () {
 
 
