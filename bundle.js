@@ -39,11 +39,7 @@ class copo {
             Math.PI *
             this.altura *
             (
-                Math.pow(this.raioMaior, 2) +
-                this.raioMaior * this.raioMenor +
-                Math.pow(this.raioMenor, 2)
-            )
-        ) / 3
+                Math.pow(this.raioMaior, 2) + this.raioMaior * this.raioMenor + Math.pow(this.raioMenor, 2))) / 3
     }
 
 
@@ -60,6 +56,6 @@ class copo {
     }
 }
 
-if (typeof module !== 'undefined' && module.exports) {
+//if (typeof module !== 'undefined' && module.exports) {
     module.exports = copo
-}
+//}
