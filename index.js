@@ -1,19 +1,33 @@
-
+//const Copo = require("./Copo")
 document.getElementById('calcular').onclick = function () {
 
 
-    let raioMaior = document.getElementById('raioMaior').value
-    let raioMenor = document.getElementById('raioMenor').value
-    let altura = document.getElementById('altura').value
+    let raioMaior = Number(document.getElementById('raioMaior').value)
+    let raioMenor = Number(document.getElementById('raioMenor').value)
+    let altura = Number(document.getElementById('altura').value)
+
+    console.log(raioMaior)
+    console.log(raioMenor)
+    console.log(altura)
 
 
-    let meuCopo = new copo(raioMaior, raioMenor, altura)
+    let copo = new Copo(raioMaior, raioMenor, altura)
 
-    document.getElementById('geratriz').innerText = "valor da geratriz (g): " + meuCopo.calcularGeratriz().toFixed(2) + " cm"
-        document.getElementById('areaBaseMenor').innerText = "area da base menor (Ab): " + meuCopo.calcularAreaBaseMenor().toFixed(2) + " cm²"
-            document.getElementById('areaBaseMaior').innerText = "area da base maior (AB): " + meuCopo.calcularAreaBaseMaior().toFixed(2) + " cm²"
-                 document.getElementById('areaLateral').innerText = "area da lateral (Al): " + meuCopo.calcularAreaLateral().toFixed(2) + " cm²"
-                    document.getElementById('areaTotal').innerText = "valor da area Total (At): " + meuCopo.calcularAreaTotal().toFixed(2) + " cm²"
-                        document.getElementById('volume').innerText = "volume (V): " + meuCopo.calcularVolume().toFixed(2) + " ml"
-                            document.getElementById('classificacao').innerText = "Classificação: " + meuCopo.classificar()
+    let resposta = document.getElementById("resposta")
+
+    let calcGeratriz = copo.calcularGeratriz()
+    let calcAreaBaseMenor = copo.calcularAreaBaseMenor()
+    let calcAreaBaseMaior = copo.calcularAreaBaseMaior()
+    let calcAreaLateral = copo.calcularAreaLateral()
+    let calcAreaTtal = copo.calcularAreaTotal()
+    let calcVolume = copo.calcularVolume()
+    let classificar = copo.classificar()
+
+    resposta.innerHTML = `Geratriz: ${calcGeratriz}<br>`
+    resposta.innerHTML += `Área base menor: ${calcAreaBaseMenor}<br>`
+    resposta.innerHTML += `Área base maior: ${calcAreaBaseMaior}<br>`
+    resposta.innerHTML += `Área lateral: ${calcAreaLateral}<br>`
+    resposta.innerHTML += `Área total: ${calcAreaTtal}<br>`
+    resposta.innerHTML += `Volume: ${calcVolume}<br>`
+    resposta.innerHTML += `Classificação: ${classificar}`
 }
